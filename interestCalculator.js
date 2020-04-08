@@ -4,7 +4,7 @@ let data = [
     {principal: 3000, time: 1},
     {principal: 2000, time: 3}
     ];
-
+//defining the function 
     function interestCalculator(data){
     let interestData=[];
     for (let i = 0; i < data.length; i++) {
@@ -13,6 +13,7 @@ let data = [
     let myInterest = {};
     let principal = data[i].principal;
     let time = data[i].time;
+ //conditional statements to check the principal and time and give the right rate 
     if(principal >= 2500 && time > 1 && time <= 3){ rate = 3;
     interest = (principal * rate * time) / 100;
     myInterest = { principal: principal, rate: rate, time: time, interest: interest};
@@ -28,6 +29,7 @@ let data = [
     else{rate = 1
     interest = (principal * rate * time) / 100;
     myInterest = {principal: principal,rate: rate,time: time,interest: interest};
+   //Add the results to an array 
     interestData.push(myInterest);
     }
     }
